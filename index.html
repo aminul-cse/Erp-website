@@ -1,0 +1,844 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>ERP WEBSITE</title>
+</head>
+
+<body>
+    <section class="">
+        <!-- dekstop header -->
+    <header class="hidden md:block fixed top-0 z-50 w-full bg-primary">
+        <nav class="h-[100px] container flex items-center justify-between">
+            <div class="flex justify-between items-center"> 
+                <a href="#home">
+                    <img class="h-12 inline" src="/images/d-code-logo-light.svg" alt="">
+                </a>
+            </div>
+            <div class="flex items-center justify-between">
+                <ul class="flex sm:flex sm:items-center sm:z-auto sm:w-auto sm:py-0 sm:pl-0 sm:opacity-100 gap-12 text-white">
+                    <li class="group relative">
+                        <a href="#home" class="flex items-center hover:text-gray-300 duration-200 font-Lato text-[17px] font-semibold">
+                            Home <i class="fa fa-chevron-down ml-1 text-[14px]"></i>
+                        </a>
+                        <!-- Dropdown Content -->
+                        
+                            <ul class="absolute hidden bg-white border rounded-md group-hover:block px-5">
+                                <div class="h-52 w-36 mt-8 text-black text-base font-Lato font-extrabold cursor-pointer">
+                                    <li>Menu 1</li>
+                                    <li class="py-3">Menu 2</li>
+                                    <li>Menu 3</li>
+                                    <li class="py-3">Menu 4</li>
+                                    <li>Menu 5</li>
+                                </div>
+                            </ul>
+                       
+                    </li>
+                    <li><a href="#pages" class="hover:text-gray-300 duration-200 font-Lato font-semibold text-[17px]">Pages <i class="fa fa-chevron-down text-[14px]"></i></a></li>
+                    <li><a href="#blogs" class="hover:text-gray-300 font-Lato font-semibold text-[17px] duration-200">Blogs <i class="fa fa-chevron-down text-[14px]"></i></a></li>
+                    <li><a href="#elements" class="hover:text-gray-300 font-Lato font-semibold text-[17px] duration-200">Elements <i class="fa fa-chevron-down text-[14px]"></i></a></li>
+                    <li><a href="#mega_menu" class="hover:text-gray-300 text-[17px] font-Lato font-semibold duration-200">MegaMenu <i class="fa fa-chevron-down text-[14px]"></i></a></li>
+                </ul>
+            </div>
+            <div class="pl-4">
+                <button class="border-white border-2 rounded-md tracking-wider text-white px-8 py-3 hover:bg-gray-100 hover:text-gray-700 font-Lato font-extrabold text-sm">
+                    SIGN IN
+                </button>
+                <div class="bg-white h-10 w-10 ml-36 mt-[-44px] flex items-center justify-center border rounded-full">
+                    <i class="fa fa-search text-[20px] font-black"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Mobile header -->
+    <header class="block md:hidden h-28 bg-blue-500">
+        <div class="flex items-center justify-center pl-[15px] pr-[15px]">
+            <div class="flex flex-row justify-between mt-5">
+                <div class="basis-2/5">
+                    <div >
+                        <img src="/images/d-code-logo-light.svg" alt="">
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <div class="text-4xl text-white">
+                        <i class="fa fa-navicon" onclick="Menu(this)"></i>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <button class="border-2 border-white text-white px-9 py-3 mr-2 font-Lato font-extrabold text-sm rounded-md tracking-wider">SIGN IN</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+</section>
+
+<main>
+    <section class="">
+        <div class="bg-no-repeat bg-[center_top] bg-cover" style="background-image: url(/images/bg-3.png);">
+            <div class="flex h-[100%] items-center justify-center py-[100px] min-h-[22vh] pb-0 pt-[100px] pr-[0px]">
+                <div class="py-4">
+                    <div class="flex flex-col items-center justify-center text-center lg:mt-4">
+                        <h1 class="text-[36px] lg:text-[48px] text-white font-SourceSerif font-bold mb-4">
+                            We Deliver the <span class="font-Alegreya">Software</span> you need
+                        </h1>
+                        <p class="leading-relaxed mb-4 font-Lato text-[20px] text-white text-center">
+                            Integrated CRM, project management, time tracking, and billing for
+                            freelancers, consultants and teams.
+                        </p>
+                        
+
+                        <!-- Buttons Container -->
+                        <div class="flex flex-col items-center justify-center sm:flex-row mt-4 gap-3">
+                            <div class="pl-3">
+                                <button class="bg-white text-blue-800 hover:text-blue-500 px-8 py-3.5 mr-2 font-Lato font-black text-sm rounded-md ease-in duration-200">TRY TO FREE</button>
+                            </div>
+                            <div class="flex items-center justify-center">
+                                <button class="border-white border-2 text-white px-8 py-2.5 hover:bg-gray-100 hover:text-gray-700 font-Lato text-sm rounded-md ease-in duration-200 text-center"><i class="fa fa-play-circle text-2xl mr-3"></i> WATCH VIDEO</button>
+                            </div>
+                        </div>
+                    
+                            <div class="mt-5">
+                                <!-- Laptop screen image as background -->
+                                <div class="relative w-full">
+                                   <img src="/images/laptop-screen.png" class="w-auto" alt="">
+                                   <div class="absolute top-0 pl-[56px] lg:pl-[220px] mt-[16px] lg:mt-[65px] h-[133px] lg:h-[530px] w-[264px] lg:w-full">
+                                       <img src="/images/ss-1.jpg" class="h-full w-auto" alt="">
+                                   </div>
+                                </div>
+                            
+                                <!-- SS-1 image overlay -->
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="pt-[100px] container">
+            <div class="lg:px-10">
+                <div class="">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 items-start z-20">
+                        <div class="text-start mb-12">
+                            <p class="text-[34px] lg:text-[48px] font-bold lg:leading-snug mb-4 tracking-tighter">Manage all your work from <span class="font-Alegreya text-[34px] lg:text-[48px] text-blue-800 font-bold">One Place</span>
+                            </p>
+                            <div class="flex items-start mt-[18px]">
+                                <div class="h-[6px] w-[60px] bg-blue-700"></div>
+                            </div>
+                                <p class="leading-relaxed font-Lato text-xl py-6">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sodales dictum viverra.
+                                </p>
+                                <p class="leading-relaxed font-Lato text-base mb-6">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sodales dictum viverra. Nam
+                                    gravida dignissim eros.
+                                    Vivamus congue erat ante, volutpat dictum neque dignissim eget.
+                                </p>
+                                <button class="bg-primary px-9 py-3 text-white rounded-md font-Lato font-extrabold text-sm hover:bg-blue-700 hover:shadow-inner ease-in duration-200 cursor-pointer">
+                                    DISCOVER MORE
+                                </button>
+                        </div>
+
+                        <div class="mt-14 lg:pl-6">
+                            <iframe class="w-[100%] h-72" src="https://www.youtube.com/embed/zH4s1H2pHyM?si=XTVnQtBJHQJLdgD3"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Focus on getting things done with dcode START-->
+
+    <section id="features" class="bg-secondary-dark">
+        <div class="container py-20">
+            <div class="text-center m-auto mb-20">
+                <h1 class="font-SourceSerif font-bold text-black items-center justify-center text-[36px] lg:text-5xl">Focus on <span class="font-Alegreya text-blue-700 text-[36px] lg:text-5xl font-bold">getting things</span> done with DCode</h1>
+                <div class="flex items-center justify-center mt-[18px]">
+                    <div class="h-[6px] w-[60px] bg-blue-700"></div>
+                </div>
+                <p class="container font-Lato text-center leading-relaxed text-xl pt-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus mi id elit gravida, quis tincidunt purus <br>
+                fringilla. Aenean convallis a neque non pellentesque.</p>
+            </div>
+    
+            <div class="grid grid-cols-1 lg:grid-cols-3 ">
+                <!-- card no 1 -->
+                <div class="text-center py-0 px-5 mb-24 lg:mb-0">
+                    <div class="bg-primary-dark text-center inline-block rounded-full py-5 px-6 h-00 w-00">
+                        <i><img src="/images/icon-5-light.svg" alt=""></i>
+                    </div>
+                    <h4 class="font-SourceSerif text-2xl font-bold  py-4">Improve Efficiency</h4>
+                    <p class="leading-relaxed font-Lato">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aenean sodales</p>
+                </div>
+    
+                <!-- card no 2 -->
+                <div class="text-center py-0 px-5 mb-24 lg:mb-0">
+                    <div class="bg-primary-dark text-center inline-block rounded-full py-5 px-6 h-00 w-00">
+                        <i><img src="/images/icon-6-light.svg" alt=""></i>
+                    </div>
+                    <h4 class="font-SourceSerif text-2xl font-bold  py-4">Improve Quality</h4>
+                    <p class="leading-relaxed font-Lato">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aenean sodales</p>
+                    
+                </div>
+    
+                <!-- card no 3 -->
+                <div class="text-center py-0 px-5 mb-24 lg:mb-0">
+                    <div class="bg-primary-dark text-center inline-block rounded-full py-5 px-6 h-00 w-00">
+                        <i><img src="/images/icon-7-light.svg" alt=""></i>
+                    </div>
+                    <h4 class="font-SourceSerif text-2xl font-bold  py-4">Improve Accountability</h4>
+                    <p class="leading-relaxed font-Lato">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Aenean sodales</p>
+                </div>
+            </div>
+            
+            <div class="py-6 flex items-center justify-center">
+                <button
+                    class="bg-primary px-9 py-3 text-white rounded-md font-Lato font-extrabold text-md hover:bg-blue-700 hover:shadow-inner ease-in duration-200 cursor-pointer">
+                    GET STARTED FOR FREE
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Focus on getting things done with dcode END-->
+
+    <!-- We offer Powerfull features-->
+    <section id="features" class="bg-blue-700">
+        <div class="h-[550px] lg:h-[300px] w-auto bg-cover bg-no-repeat bg-bottom container" style="background-image: url('/images/half-circle-bg.png');">
+            <div class="">
+                <div class="flex items-center justify-center">
+                    <h1 class="font-SourceSerif font-bold text-white pt-24 text-[30px] lg:text-5xl mb-[18px] text-center">We offer Powerfull <span class="font-Alegreya">features</span></h1>
+                </div>
+                <p class="font-Lato leading-relaxed text-xl text-center text-white mb-3 lg:mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Duis finibus mi id elit gravida,<br>quis tincidunt purus
+                    fringilla. Aenean convallis a neque non pellentesque.
+                </p>
+            </div>
+        </div>
+        <div class="mt-4 px-5 pb-24">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
+                <div class="col-span-1 cursor-pointer hover:drop-shadow-xl ease-in duration-200 pt-16 lg:pt-0">
+                    <div class="bg-blue-800 border-[6px] rounded-lg border-blue-800">
+                        <div class="py-[40px] px-[30px]">
+                            <div class="">
+                                <p class="absolute h-[10px] w-[3px] bg-white"></p>
+                                <p class="relative h-[10px] w-[10px] bg-white left-[6px]"></p> 
+                            </div>
+                            <div class="pl-[30px]">
+                                <h1 class="mt-[-24px] font-SourceSerif text-[24px] text-white font-bold">Time Tracking</h1>
+                                <p class="mt-[18px] text-[16px] text-white font-Lato">Pellentesque at libero sed tellus fringilla volutpat. Nullam vulputate velit id augue commodo scelerisque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 cursor-pointer hover:drop-shadow-xl ease-in duration-200">
+                    <div class="bg-blue-800 border-[6px] rounded-lg border-blue-800">
+                        <div class="py-[40px] px-[30px]">
+                            <div class="">
+                                <p class="absolute h-[10px] w-[3px] bg-white"></p>
+                                <p class="relative h-[10px] w-[10px] bg-white left-[6px]"></p>
+                            </div>
+                            <div class="pl-[30px]">
+                                <h1 class="mt-[-24px] font-SourceSerif text-[24px] text-white font-bold">Time Billing</h1>
+                                <p class="mt-[18px] text-[16px] text-white font-Lato">Pellentesque at libero sed tellus fringilla
+                                volutpat. Nullam vulputate velit id augue commodo scelerisque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 cursor-pointer hover:drop-shadow-xl ease-in duration-200">
+                    <div class="bg-blue-800 border-[6px] rounded-lg border-blue-800">
+                        <div class="py-[40px] px-[30px]">
+                            <div class="">
+                                <p class="absolute h-[10px] w-[3px] bg-white"></p>
+                                <p class="relative h-[10px] w-[10px] bg-white left-[6px]"></p>
+                            </div>
+                            <div class="pl-[30px]">
+                                <h1 class="mt-[-24px] font-SourceSerif text-[24px] text-white font-bold">Email Tasks in</h1>
+                                <p class="mt-[18px] text-[16px] text-white font-Lato">Pellentesque at libero sed tellus fringilla
+                                    volutpat. Nullam vulputate velit id augue commodo scelerisque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-7 py-7">
+                <div class="col-span-1 cursor-pointer hover:drop-shadow-xl ease-in duration-200">
+                    <div class="bg-blue-800 border-[6px] rounded-lg border-blue-800">
+                        <div class="py-[40px] px-[30px]">
+                            <div class="">
+                                <p class="absolute h-[10px] w-[3px] bg-white"></p>
+                                <p class="relative h-[10px] w-[10px] bg-white left-[6px]"></p>
+                            </div>
+                            <div class="pl-[30px]">
+                                <h1 class="mt-[-24px] font-SourceSerif text-[24px] text-white font-bold">Calender Sync</h1>
+                                <p class="mt-[18px] text-[16px] text-white font-Lato">Pellentesque at libero sed tellus fringilla
+                                    volutpat. Nullam vulputate velit id augue commodo scelerisque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 cursor-pointer hover:drop-shadow-xl ease-in duration-200">
+                    <div class="bg-blue-800 border-[6px] rounded-lg border-blue-800">
+                        <div class="py-[40px] px-[30px]">
+                            <div class="">
+                                <p class="absolute h-[10px] w-[3px] bg-white"></p>
+                                <p class="relative h-[10px] w-[10px] bg-white left-[6px]"></p>
+                            </div>
+                            <div class="pl-[30px]">
+                                <h1 class="mt-[-24px] font-SourceSerif text-[24px] text-white font-bold">Mobile Application</h1>
+                                <p class="mt-[18px] text-[16px] text-white font-Lato">Pellentesque at libero sed tellus fringilla
+                                    volutpat. Nullam vulputate velit id augue commodo scelerisque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 cursor-pointer hover:drop-shadow-xl ease-in duration-200">
+                    <div class="bg-blue-800 border-[6px] rounded-lg border-blue-800">
+                        <div class="py-[40px] px-[30px]">
+                            <div class="">
+                                <p class="absolute h-[10px] w-[3px] bg-white"></p>
+                                <p class="relative h-[10px] w-[10px] bg-white left-[6px]"></p>
+                            </div>
+                            <div class="pl-[30px]">
+                                <h1 class="mt-[-24px] font-SourceSerif text-[24px] text-white font-bold">Access Control</h1>
+                                <p class="mt-[18px] text-[16px] text-white font-Lato">Pellentesque at libero sed tellus fringilla
+                                    volutpat. Nullam vulputate velit id augue commodo scelerisque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-7">
+                <div class="col-span-1 cursor-pointer hover:drop-shadow-xl ease-in duration-200 mb-0 lg:mb-24">
+                    <div class="bg-blue-800 border-[6px] rounded-lg border-blue-800">
+                        <div class="py-[40px] px-[30px]">
+                            <div class="">
+                                <p class="absolute h-[10px] w-[3px] bg-white"></p>
+                                <p class="relative h-[10px] w-[10px] bg-white left-[6px]"></p>
+                            </div>
+                            <div class="pl-[30px]">
+                                <h1 class="mt-[-24px] font-SourceSerif text-[24px] text-white font-bold">Out of Office</h1>
+                                <p class="mt-[18px] text-[16px] text-white font-Lato">Pellentesque at libero sed tellus fringilla
+                                    volutpat. Nullam vulputate velit id augue commodo scelerisque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 cursor-pointer hover:drop-shadow-xl ease-in duration-200">
+                    <div class="bg-blue-800 border-[6px] rounded-lg border-blue-800">
+                        <div class="py-[40px] px-[30px]">
+                            <div class="">
+                                <p class="absolute h-[10px] w-[3px] bg-white"></p>
+                                <p class="relative h-[10px] w-[10px] bg-white left-[6px]"></p>
+                            </div>
+                            <div class="pl-[30px]">
+                                <h1 class="mt-[-24px] font-SourceSerif text-[24px] text-white font-bold">Snooze Tasks</h1>
+                                <p class="mt-[18px] text-[16px] text-white font-Lato">Pellentesque at libero sed tellus fringilla
+                                    volutpat. Nullam vulputate velit id augue commodo scelerisque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-span-1 cursor-pointer hover:drop-shadow-xl ease-in duration-200 mb-24 lg:mb-0">
+                    <div class="bg-blue-800 border-[6px] rounded-lg border-blue-800">
+                        <div class="py-[40px] px-[30px]">
+                            <div class="">
+                                <p class="absolute h-[10px] w-[3px] bg-white"></p>
+                                <p class="relative h-[10px] w-[10px] bg-white left-[6px]"></p>
+                            </div>
+                            <div class="pl-[30px]">
+                                <h1 class="mt-[-24px] font-SourceSerif text-[24px] text-white font-bold">Track Conversations</h1>
+                                <p class="mt-[18px] text-[16px] text-white font-Lato">Pellentesque at libero sed tellus fringilla
+                                    volutpat. Nullam vulputate velit id augue commodo scelerisque.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----./ We offer Powerfull features-->
+
+    <!-- Pricing plans -->
+    <section>
+        <div class="container py-[100px] lg:py-[100px] px-[0px] bg-slate-100">
+            <div class="mb-[18px]">
+                <h1 class="font-SourceSerif text-[36px] lg:text-[48px] font-bold text-center">Pricing Plans</h1>
+                <div class="flex items-center justify-center mt-[18px]">
+                    <div class="h-[6px] w-[60px] bg-blue-700"></div>
+                </div>
+
+            </div>
+            <div class="mb-[18px]">
+                <p class="font-Lato text-[20px] text-center leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus mi id elit gravida,<br> quis tincidunt purus
+                    fringilla. Aenean convallis a neque non pellentesque.
+                </p>
+            </div>
+            <div class="container grid grid-cols-1 lg:grid-cols-3 gap-7 pt-32">
+                <div class="col-span-1">
+                    <div class="bg-white py-[60px] px-[30px] border rounded-lg">
+                        <div class="mt-[-150px]">
+                            <div class="container bg-gray-700 flex items-center justify-center h-[180px] w-[180px] border-[10px] border-white rounded-full">
+                                <div class="py-[35px] px-[0px]">
+                                    <div class="relative align-super mt-[-20px] mr-20 text-[36px] text-white font-black">$</div>
+                                    <div class="absolute align-sub ml-6 mt-[-60px] text-[60px] text-white font-black tracking-tighter">15</div>
+                                    <p class="text-white font-Lato mt-4 text-[16px]">
+                                        PER MONTH
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="mb-[18px] mt-10">
+                            <h1 class="text-center text-[36px] font-SourceSerif font-bold tracking-[-0.6px]">Start-Up</h1>
+                            <div class="flex items-center justify-center mt-[18px]">
+                                <div class="h-[6px] w-[60px] bg-blue-700"></div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <p class="mb-[18px] font-Lato text-base text-center">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem nunc, semper sed metus at, lacinia viverra leo.
+                            </p>
+                        </div>
+                        <div class="py-[40px]">
+                            <ul class="flex flex-col items-center justify-center">
+                                <li class="pb-4">
+                                    <i class="fa fa-check text-blue-700 text-[18px] font-bold"></i>
+                                    <span class="text-lg font-semibold font-Lato px-3">Easy Customizable</span>
+                                </li>
+                                <li class="pb-4">
+                                    <i class="fa fa-check text-blue-700 text-[18px] font-bold"></i>
+                                    <span class="text-base lg:text-lg font-semibold font-Lato px-0 lg:px-3">1 Month Support Service</span>
+                                </li>
+                                <li class="pb-4">
+                                    <i class="fa fa-check text-blue-700 text-[18px] font-bold"></i>
+                                    <span class="text-lg font-semibold font-Lato px-3">Singal User license</span>
+                                </li>
+                                <li class="pb-4">
+                                    <i class="fa-solid fa-xmark text-red-700"></i>
+                                    <span class="text-lg font-semibold font-Lato px-3 text-gray-300"> Reports & Billing</span>
+                                </li>
+                                <li class="pb-4">
+                                    <i class="fa fa-check text-blue-700 text-[18px] font-bold"></i>
+                                    <span class="text-lg font-semibold font-Lato px-3">100Mb Storage</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button class="bg-gray-700 px-9 py-3 text-white rounded-md font-Lato font-extrabold text-[14px] hover:bg-gray-900 ease-in duration-200 cursor-pointer">
+                               PURCHASE NOW
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-span-1 py-24 lg:py-0">
+                    <div class="bg-white py-[60px] px-[30px] border rounded-lg">
+                        <div class="mt-[-150px]">
+                            <div
+                                class="container bg-blue-700 flex items-center justify-center h-[180px] w-[180px] border-[10px] border-white rounded-full">
+                                <div class="py-[35px] px-[0px]">
+                                    <div class="relative align-super mt-[-20px] mr-20 text-[36px] text-white font-black">$</div>
+                                    <div class="absolute align-sub ml-6 mt-[-60px] text-[60px] text-white font-black tracking-tighter">
+                                        30</div>
+                                    <p class="text-white font-Lato mt-4 text-[16px]">
+                                        PER MONTH
+                                    </p>
+                                </div>
+                            </div>
+                
+                        </div>
+                        <div class="mb-[18px] mt-10">
+                            <h1 class="text-center text-[36px] font-SourceSerif font-bold tracking-[-0.6px]">Start-Up</h1>
+                            <div class="flex items-center justify-center mt-[18px]">
+                                <div class="h-[6px] w-[60px] bg-blue-700"></div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <p class="mb-[18px] font-Lato text-base text-center">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem nunc, semper sed metus at, lacinia
+                                viverra leo.
+                            </p>
+                        </div>
+                        <div class="py-[40px]">
+                            <ul class="flex flex-col items-center justify-center">
+                                <li class="pb-4">
+                                    <i class="fa fa-check text-blue-700 text-[18px] font-bold"></i>
+                                    <span class="text-lg font-semibold font-Lato px-3">Easy Customizable</span>
+                                </li>
+                                <li class="pb-4">
+                                    <i class="fa fa-check text-blue-700 text-[18px] font-bold"></i>
+                                    <span class="text-base lg:text-lg font-semibold font-Lato px-0 lg:px-3">1 year Support Service</span>
+                                </li>
+                                <li class="pb-4">
+                                    <i class="fa fa-check text-blue-700 text-[18px] font-bold"></i>
+                                    <span class="text-lg font-semibold font-Lato px-3">3 User license</span>
+                                </li>
+                                <li class="pb-4">
+                                    <i class="fa-solid fa-xmark text-red-700"></i>
+                                    <span class="text-lg font-semibold font-Lato px-3 text-gray-300"> Reports & Billing</span>
+                                </li>
+                                <li class="pb-4">
+                                    <i class="fa fa-check text-blue-700 text-[18px] font-bold"></i>
+                                    <span class="text-lg font-semibold font-Lato px-3">2Gb Storage per user</span>
+                                </li>
+                            </ul>
+                
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button
+                                class="bg-primary px-9 py-3 text-white rounded-md font-Lato font-extrabold text-[14px] hover:bg-blue-700 ease-in duration-200 cursor-pointer">
+                                PURCHASE NOW
+                            </button>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="col-span-1">
+                    <div class="bg-white py-[60px] px-[30px] border rounded-lg">
+                        <div class="mt-[-150px]">
+                            <div
+                                class="container bg-gray-700 flex items-center justify-center h-[180px] w-[180px] border-[10px] border-white rounded-full">
+                                <div class="py-[35px] px-[0px]">
+                                    <div class="relative align-super mt-[-20px] mr-20 text-[36px] text-white font-black">$</div>
+                                    <div class="absolute align-sub ml-6 mt-[-60px] text-[60px] text-white font-black tracking-tighter">
+                                        50</div>
+                                    <p class="text-white font-Lato mt-4 text-[16px]">
+                                        PER MONTH
+                                    </p>
+                                </div>
+                            </div>
+                
+                        </div>
+                        <div class="mb-[18px] mt-10">
+                            <h1 class="text-center text-[36px] font-SourceSerif font-bold tracking-[-0.6px]">Start-Up</h1>
+                            <div class="flex items-center justify-center mt-[18px]">
+                                <div class="h-[6px] w-[60px] bg-blue-700"></div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <p class="mb-[18px] font-Lato text-base text-center">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec lorem nunc, semper sed metus at, lacinia
+                                viverra leo.
+                            </p>
+                        </div>
+                        <div class="py-[40px]">
+                            <ul class="flex flex-col items-center justify-center">
+                                <li class="pb-4">
+                                    <i class="fa fa-check text-blue-700 text-[18px] font-bold"></i>
+                                    <span class="text-lg font-semibold font-Lato px-3">Easy Customizable</span>
+                                </li>
+                                <li class="pb-4">
+                                    <i class="fa fa-check text-blue-700 text-[18px] font-bold"></i>
+                                    <span class="text-base lg:text-lg font-semibold font-Lato px-0 lg:px-3">1 year Support Service</span>
+                                </li>
+                                <li class="pb-4">
+                                    <i class="fa fa-check text-blue-700 text-[18px] font-bold"></i>
+                                    <span class="text-lg font-semibold font-Lato px-3">10 User license</span>
+                                </li>
+                                <li class="pb-4">
+                                    <i class="fa-solid fa-check text-blue-700"></i>
+                                    <span class="text-lg font-semibold font-Lato px-3"> Reports & Billing</span>
+                                </li>
+                                <li class="pb-4">
+                                    <i class="fa fa-check text-blue-700 text-[18px] font-bold"></i>
+                                    <span class="text-lg font-semibold font-Lato px-3">2Gb Storage per user</span>
+                                </li>
+                            </ul>
+                
+                        </div>
+                        <div class="flex items-center justify-center">
+                            <button
+                                class="bg-gray-700 px-9 py-3 text-white rounded-md font-Lato font-extrabold text-[14px] hover:bg-gray-900 ease-in duration-200 cursor-pointer">
+                                PURCHASE NOW
+                            </button>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Happy Clients Feedback -->
+    <section>
+        <div class="pb-[1180px] lg:pb-[400px]">
+            <div class="container bg-no-repeat bg-[center_top] bg-cover h-[600px] lg:h-[400px] w-[100%]"
+                style="background-image: url(/images/bg-2.jpg);">
+                <div class="pt-24">
+                    <h2 class="font-SourceSerif text-[36px] lg:text-[48px] text-white font-bold mb-[18px] tracking-[-1px] m-0 leading-tight">
+                        Happy Clients <span class="font-Alegreya text-[36px] lg:text-[48px]">Feedback</span></h2>
+                    <p class="font-Lato text-white text-[20px] leading-relaxed">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Duis finibus mi id elit gravida,<br> quis tincidunt purus
+                        fringilla. Aenean convallis a neque non pellentesque.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-12 gap-10">
+                    <!-- Review Card-->
+                    <div class="col-span-1">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">
+                                Pericula expetendis has no, quo populo forensibus contentiones et, nibh error in  per. Vis in tritani debitis
+                                delicatissimi, error omnesque invenire usu ex, qui illud nonumes ad. Lorem ipsum dolor sit amet consectetur adipiscing
+                                elit. Aenean sodales dictum viverra.
+                            </p>
+                            <div class="client-info">
+                                <h1 class="client-name">Andy Sant</h1>
+                                <p class="title">Founder Coinpool</p>
+                            </div>
+                            <div class="icon-placement">
+                                <div class="icon-wrapper">
+                                    <i class="icon fa fa-quote-left"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">
+                                Pericula expetendis has no, quo populo forensibus contentiones et, nibh error in  per. Vis in tritani debitis
+                                delicatissimi, error omnesque invenire usu ex, qui illud nonumes ad. Lorem ipsum dolor sit amet consectetur adipiscing
+                                elit. Aenean sodales dictum viverra.
+                            </p>
+                            <div class="client-info">
+                                <h1 class="client-name">Andy Sant</h1>
+                                <p class="title">Founder Coinpool</p>
+                            </div>
+                            <div class="icon-placement">
+                                <div class="icon-wrapper">
+                                    <i class="icon fa fa-quote-left"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-span-1">
+                    <div class="testimonial-card">
+                            <p class="testimonial-text">
+                                Pericula expetendis has no, quo populo forensibus contentiones et, nibh error in  per. Vis in tritani debitis
+                                delicatissimi, error omnesque invenire usu ex, qui illud nonumes ad. Lorem ipsum dolor sit amet consectetur adipiscing
+                                elit. Aenean sodales dictum viverra.
+                            </p>
+                            <div class="client-info">
+                                <h1 class="client-name">Andy Sant</h1>
+                                <p class="title">Founder Coinpool</p>
+                            </div>
+                            <div class="icon-placement">
+                                <div class="icon-wrapper">
+                                    <i class="icon fa fa-quote-left"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- newsletter -->
+    <section class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-4 h-[700px] lg:h-[450px]">
+            <div class="">
+                <img src="/images/newsletter-img.png" class="lg:h-96" alt="">
+            </div>
+            <div class="relative">
+                <div class="mt-2 lg:mt-14">
+                    <h1 class="text-[36px] lg:text-[48px] font-bold mb-[18px] tracking-[-1px]">Subscribe to our <span
+                        class="text-blue-600 font-Alegreya text-[36px] lg:text-[48px]">Newsletter</span>
+                        <div class="h-[6px] w-[60px] mt-[18px] bg-blue-700"></div>
+                    </h1>
+                </div>
+
+                <div class="leading-relaxed">
+                    <p class="font-Lato text-[20px] mb-[18px]">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis finibus
+                        mi id elit gravida, quis tincidunt purus
+                        fringilla.
+                    </p>
+                </div>
+
+                    <div class="lg:flex items-center justify-center mt-8">
+                        <div class="flex-1 lg:relative">
+                            <input type="text" class="border rounded-lg w-full p-4" placeholder="Email">
+                        </div>
+                        <div class="lg:absolute right-0 pr-4 py-2">
+                            <button class="bg-primary px-9 py-3 text-white rounded-md font-Lato font-extrabold hover:bg-blue-700 hover:shadow-inner ease-in duration-200 cursor-pointer text-[14px] ">SUBSCRIBE NOW! </button>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+
+    <section>
+        <footer class="bg-blue-700">
+            <div class="grid grid-cols-1 lg:grid-cols-6 gap-4 container py-[80px] lg:py-[100px]">
+                <div class="col-span-2">
+                    <div class="mb-[30px]">
+                        <img src="/images/d-code-logo-light.svg" class="h-[56px] w-[185px]" alt="">
+                    </div>
+                        <div class="text-base font-Lato text-white font-normal pb-[12px]">
+                            Lorem ipsum dolor sit amet consectetur,
+                            adipisicing elit.Aenean sodales dictum viverra. Nam gravida dignissim eros.
+                        </div>
+                        <div class="font-SourceSerif text-white font-bold text-xl leading-tight">Download the App</div>
+                        <div class="mt-4">
+                            <div class="flex gap-4">
+                                <div class="">
+                                    <button
+                                        class="border-blue-500 text-white border px-6 py-2 font-Lato font-normal text-base rounded-md">
+                                        <i class="fab fa-google-play pr-2"></i>
+                                        Google Play
+                                    </button>
+                                </div>
+                                <div>
+                                    <button class="border-blue-500 text-white border px-6 py-2 font-Lato font-normal text-base rounded-md">
+                                        <i class="fab fa-apple pr-2"></i>
+                                        App Store
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                </div> 
+
+                <!-- Useful links -->
+
+                <div class="col-span-1">
+                    <div class="mb-5">
+                        <h1 class="font-SourceSerif text-[20px] text-white font-bold">Useful Links</h1>
+                    </div>
+                        <ul>
+                            <div class="pb-10">
+                                <li class="fa fa-dot-circle text-white text-sm hover:text-gray-300 ease-in duration-300 absolute">
+                                        <a href="" class="font-Lato  font-medium text-base px-2 relative">Trust & Safety</a>
+                                </li>
+                            </div>
+                            <div class="pb-10">
+                                <li class="fa fa-dot-circle text-white text-sm hover:text-gray-300 ease-in duration-300 absolute">
+                                        <a href="" class="font-Lato font-medium text-base px-2 relative">Cookie Policy</a>
+                                </li>
+                            </div>
+                            <div class="pb-4">
+                                <li class="fa fa-dot-circle text-white text-sm hover:text-gray-300 ease-in duration-300">
+                                        <a href="" class="font-Lato font-medium text-base px-2">Contact Us</a>
+                                </li>
+                            </div>
+                            <div class="pb-4">
+                                 <li class="fa fa-dot-circle text-white text-sm hover:text-gray-300 ease-in duration-300">
+                                        <a href="" class="font-Lato  font-medium text-base px-2">Privacy Policy</a>
+                                </li>
+                            </div>
+                            <div class="">
+                                <li class="fa fa-dot-circle text-white text-sm hover:text-gray-300 ease-in duration-300 mb-3">
+                                        <a href="" class="font-Lato  font-medium text-base px-2">Terms of Service</a>
+                                </li>
+                            </div>
+                        </ul>
+                </div> 
+
+                <!-- Support -->
+
+                <div class="col-span-1 hidden lg:block">
+                    <div class="mb-5">
+                        <h1 class="font-SourceSerif text-[20px] text-white font-bold">Support</h1>
+                    </div>
+                        <ul>
+                            <div class="pb-10">
+                                <li class="fa fa-dot-circle text-white text-sm hover:text-gray-300 ease-in duration-300 absolute">
+                                    <a href="" class="font-Lato  font-medium text-base px-2 relative">Documentation</a>
+                                </li>
+                            </div>
+                            <div class="pb-10">
+                                <li class="fa fa-dot-circle text-white text-sm hover:text-gray-300 ease-in duration-300 absolute">
+                                    <a href="" class="font-Lato  font-medium text-base px-2 relative">FAQ</a>
+                                </li>
+                            </div>
+                            <div class="pb-10">
+                                <li class="fa fa-dot-circle text-white text-sm hover:text-gray-300 ease-in duration-300 absolute">
+                                    <a href="" class="font-Lato  font-medium text-base px-2 relative">Press</a>
+                                </li>
+                            </div>
+                            
+                            <div class="pb-10">
+                                <li class="fa fa-dot-circle text-white text-sm hover:text-gray-300 ease-in duration-300 absolute">
+                                    <a href="" class="font-Lato  font-medium text-base px-2 relative">Community</a>
+                                </li>
+                             </div>
+                        </ul>
+                    </div> 
+
+                <!-- Stay updated -->
+
+                <div class="col-span-2">
+                    <div class="mb-5">
+                        <h1 class="font-SourceSerif text-[20px] text-white font-bold">Stay Updated</h1>
+                    </div>
+                        <ul>
+                            <div class="pb-10">
+                                <li class="fa fa-envelope-open-text text-white text-xl hover:text-gray-300 ease-in duration-300 absolute">
+                                    <a href="" class="font-Lato  font-medium text-base px-2 relative">support@sacredthemes.net</a>
+                                </li>
+                            </div>
+                            <div class="pb-10">
+                                <li class="fa fa-phone-flip text-white text-xl hover:text-gray-300 ease-in duration-300 absolute">
+                                    <a href="" class="font-Lato  font-medium text-base px-2 relative">+1 (234) 567-9801</a>
+                                </li>
+                            </div>
+                            <div class="pb-10">
+                                <li class="fa fa-at text-white text-xl hover:text-gray-300 ease-in duration-300 absolute">
+                                    <a href="" class="font-Lato  font-medium text-base px-2 relative">49 Uniqe Square D, New York, NY 10003, USA</a>
+                                </li>
+                            </div>
+                        </ul>
+                            <div class="mt-8 lg:mt-4">
+                                <div class="flex gap-1">
+                                    <div class="">
+                                        <button class="border-blue-500 text-white border px-4 py-2 font-Lato font-normal text-base rounded-md">
+                                            <i class="fab fa-facebook-f text-[24px]"></i>
+                                            
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <button class="border-blue-500 text-white border px-4 py-2 font-Lato font-normal text-base rounded-md">
+                                            <i class="fab fa-linkedin-in text-[24px]"></i>
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <button class="border-blue-500 text-white border px-4 py-2 font-Lato font-normal text-base rounded-md">
+                                            <i class="fab fa-twitter text-[24px]"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="items-center justify-center  border-t-[1px] border-gray-400 px-3 py-5 text-white font-Lato text-center">
+                        © Copyright DCode 2023. Made with <i class="fa fa-heart"></i> by <span class="font-bold">SacredThemes</span>.
+                </div>
+                
+            </div> 
+        </div>
+                    
+        </footer>
+    </section>
+</body>
+
+</html>  
